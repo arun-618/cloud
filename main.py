@@ -41,4 +41,12 @@ BlogPost(
     content="Python is robust"
 ).save()
 
+for user in User.objects:
+    print (user.username)
+    print (user.email)
+
+for blog in BlogPost.objects:
+    print(blog.title)
+    print(blog.content)
+
 print("Done")

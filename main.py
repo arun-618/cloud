@@ -11,13 +11,6 @@ class User(Document):
     username = StringField(unique=True, required=True)
     email = EmailField(unique=True)
 
-    def json(self):
-        user_dict = {
-            "username": self.username,
-            "email": self.email
-        }
-        return json.dumps(user_dict)
-
 
 class BlogPost(DynamicDocument):
     title = StringField()
